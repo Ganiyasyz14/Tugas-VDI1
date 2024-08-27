@@ -1,0 +1,131 @@
+---
+title: "TUGAS RESUME VDI 1"
+author: "GANIYA SYAZWA_122450073_RA"
+date: "2024-08-26"
+output:
+  word_document: default
+  pdf_document: default
+---
+
+## Making Datavisualization More Efficient and Effective: A Survey
+
+**Abstrak**
+
+    Visualisasi data sangat penting untuk membantu pengambilan keputusan di dunia bisnis yang saat ini berbasis data. Namun, dengan meningkatnya volume dan kecepatan data, dibutuhkan ahli basis data untuk membuat visualisasi yang lebih efisien dan efektif. Artikel ini membahas tiga hal utama: spesifikasi visualisasi, cara membuat visualisasi lebih efisien dan cepat, serta rekomendasi visualisasi untuk menemukan tampilan data yang lebih menarik dan informatif.
+    
+**1. Latar Belakang**
+
+    Visualisasi data adalah alat penting dalam memahami dan menyajikan big data dengan cara yang visual seperti panjang, posisi, bentuk, dan warna dan secara interaktif. Dengan menggunakan teknologi seperti D3, Vega Lite, dan Tableau, data dapat dipresentasikan secara efektif, membantu ahli data dan pengguna lainnya untuk memahami hasil analisis dengan lebih mudah. Visualisasi data juga telah digunakan dalam berbagai aplikasi seperti Excel, Google Sheets, dan Microsoft Power BI, sehingga menjadi penting dalam membuat keputusan strategis dan operasional di berbagai organisasi.
+    
+```{r}
+library(magick)
+gambar <- image_read("C:/Users/HP/Downloads/foto 1.jpeg")
+gambar
+```
+
+Visualisasi data melibatkan beberapa tahapan penting dalam prosesnya, yaitu:
+
+  1.Data Import: Mengambil data dari sumber yang 
+    diinginkan.
+  
+  2.Data Preparation: Mengolah data untuk siap 
+    digunakan, seperti normalisasi, pengoreksian         kesalahan, dan penginterpolasi nilai yang hilang.
+    
+  3.Data Manipulation: Memilih dan mengolah data yang     akan digunakan, termasuk operasi seperti         
+    penggabungan dan pengelompokan.
+    
+  4.Mapping: Menghubungkan data dengan primitif     
+    geometris (misalnya titik dan garis) bersama     
+    atributnya (misalnya warna, posisi, dan ukuran).
+    
+  5.Rendering: Mengubah data geometris menjadi      
+    representasi visual yang dapat dilihat.
+
+Dalam proses visualisasi data, ada tiga cara yang membuatnya lebih efisien dan efektif, relevan bagi peneliti database:
+
+  1.Spesifikasi Visualisasi: Ini adalah cara     
+    pengguna memberitahu sistem apa yang mereka ingin     lihat. Sistem harus tahu bagaimana menghubungkan     data dengan gambar.
+    
+  2.Sistem yang Efisien: Sistem harus bisa membuat 
+    gambar data dengan cepat dan tidak memakan waktu     lama. Banyak orang mencoba membuat sistem yang   
+    bisa mengolah banyak data dengan cepat.
+    
+  3.Rekomendasi Visualisasi: Membuat gambar data yang     tepat bisa sulit. Sistem harus bisa memberikan  
+    saran kepada pengguna agar mereka bisa membuat  
+    gambar yang baik.
+    
+**2. Spesifikasi Visualisasi**    
+    
+```{r}
+library(magick)
+gambar <- image_read("C:/Users/HP/Downloads/foto 2.png")
+gambar
+```
+
+2.1 Kategorisasi Bahasa Visualisasi Data 
+
+  A. Low-level Languages 
+  
+      Bahasa ini memungkinkan pengguna untuk membuat semua detail visualisasi secara spesifik. Contohnya, Prefuse dan Flare memerlukan pengguna untuk menginisialisasi panel dan menambahkan elemen visual secara manual.
+      
+  B. High-level Languages
+  
+      Bahasa ini menyediakan detail-detail visualisasi konstruksi yang sudah jadi. Contohnya, ggplot2, Vega-Lite, dan Altair hanya memerlukan pengguna untuk menentukan jenis tanda visual seperti garis atau bar, tanpa perlu membuat detail lainnya.
+      
+  C. GUI-based Tools
+  
+      Alat-alat ini memungkinkan pengguna untuk membuat visualisasi dengan mudah tanpa perlu menulis kode. Contohnya, Tableau, Excel, dan Google Sheets memungkinkan pengguna membuat visualisasi dengan cara yang interaktif dan mudah digunakan.
+
+  D. Underspecified Language
+  
+      Visualisasi data harus memberikan wawasan tentang data, tapi kadang-kadang pengguna tidak tahu semua tentang data karena data besar dan sering diperbarui. Oleh karena itu, perlu ada sistem yang bisa menerjemahkan spesifikasi yang tidak terdefinisi, seperti referensi, kata kunci, atau bahasa alam. Contoh sistem seperti ZenVisage, APT, DeepEye, Eviza, dan Evizeon membantu pengguna dengan cara yang mudah dan interaktif, sehingga mereka bisa melihat data dengan lebih baik tanpa harus tahu semua detailnya.
+      
+**3. Metode Efisien untuk Visualisasi Data**
+
+      Visualisasi data adalah proses yang penting karena siklus hidupnya selalu iteratif, dengan pengguna yang terlibat langsung. Ada beberapa metode efisien untuk visualisasi data: pertama, membuat visualisasi yang tepat dengan kecepatan tinggi; kedua, membuat visualisasi yang mendekati jika tidak mungkin membuat yang tepat karena data besar dan kompleks; dan ketiga, membuat visualisasi yang berkelanjutan, yaitu secara bertahap memperhalus hasil intermediet. Dengan demikian, metode-metode ini membantu membuat visualisasi data yang efisien dan efektif, terutama dalam kasus data yang besar dan kompleks.
+
+```{r}
+library(magick)
+gambar <- image_read("C:/Users/HP/Downloads/foto 3.png")
+gambar
+```
+
+3.1 Exact data visualization
+
+    Sistem visualisasi data yang efektif membaca data dari database, menerjemahkan pertanyaan visualisasi ke SQL, dan menggunakan alat visualisasi untuk mengrender visualisasi. Contoh sistem seperti DeepEye, Polaris, dan SeeDB menggunakan pernyataan SQL untuk mendapatkan data yang diperlukan. Dengan demikian, sistem ini membantu membuat visualisasi data yang cepat dan akurat, sehingga pengguna bisa memahami data dengan lebih baik.
+
+3.2 Approximatedatavisualization
+
+    Ketika volume data tumbuh sangat cepat, modul pengolahan data tradisional tidak bisa memberikan hasil yang cepat. Untuk mengatasi ini, penelitian menggunakan teknik AQP (Approximate Query Processing). AQP memungkinkan pengguna mendapatkan visualisasi data yang hampir akurat dalam waktu interaktif dengan mengorbankan sedikit kualitas. Contohnya, Sample+Seek menggunakan sampling uniform untuk menjawab kueri COUNT agregasi dan sampling berbasis ukuran untuk menjawab kueri SUM agregasi. Pangloss juga dirancang untuk memberikan visualisasi yang mendekati terlebih dahulu, lalu hasil akurat dihitung di latar belakang jika diperlukan. Dengan cara ini, pengguna bisa memahami data lebih cepat dan akurat.
+    
+3.3 Progressive data visualization
+
+    Banyak cara untuk membuat visualisasi data yang bisa dilihat secara progresif, artinya kita bisa melihat hasilnya secara bertahap. Ada beberapa cara ini, seperti dengan mengubah ukuran wadah data atau membuat struktur data yang bisa dibuka dan ditutup seperti pohon. Cara pertama, seperti imMens, membagi data menjadi wadah yang sama besar dan bisa dilihat dengan zoom. Namun, cara ini tidak bisa digunakan jika kita ingin tahu detail tertentu, seperti mengetahui 10, 20, atau 30 siswa teratas. Cara kedua, seperti HETree, membuat struktur data yang bisa dibuka dan ditutup, sehingga kita bisa melihat detail data dengan mudah dan sesuai dengan kebutuhan kita.  
+
+**4. Rekomendasi Visualisasi**
+
+      Membuat visualisasi data menjadi lebih mudah, kita perlu sistem yang bisa merekomendasikan cara visualisasi yang baik. Sistem ini harus bisa menghitung semua cara visualisasi yang mungkin, seperti memilih kolom mana yang harus dilihat, mengubah data menjadi bentuk yang lebih sederhana, dan memilih jenis gambar yang tepat untuk menunjukkan data. Jika pengguna tidak memberikan semua informasi, sistem harus bisa memberikan saran berdasarkan pengalaman sebelumnya. Jika ada cara visualisasi yang tidak tepat, sistem harus bisa menghilangkannya. Setelah itu, sistem akan mengurutkan cara visualisasi yang paling baik dan merekomendasikan beberapa cara terbaik kepada pengguna. Dengan cara ini, pengguna tidak perlu melakukan banyak pekerjaan dan bisa langsung melihat data dengan cara yang paling mudah.
+
+4.1 Rekomendasi Berdasarkan Spesifikasi
+  
+    Rekomendasi berdasarkan spesifikasi dibagi menjadi 2, yaitu :
+    
+    1. Spesifikasi yang tidak lengkap
+    
+        Sistem rekomendasi visualisasi ada dua jenis. Pertama, sistem yang tidak memerlukan input pengguna, seperti APT yang tahu apa yang ingin dilihat pengguna sebelum memberikan rekomendasi. Kedua, sistem yang memerlukan input pengguna, seperti Voyager yang meminta pengguna memilih satu kolom yang ingin dilihat. DeepEye juga seperti ini, pengguna harus mengetikkan apa yang ingin dilihat, seperti "tunjukkan saya grafik garis tentang listrik". Sistem yang memerlukan input pengguna harus memilih kandidat-kandidat visualisasi yang sesuai dengan input pengguna, seperti menghilangkan grafik yang tidak sesuai. Tapi, cara mengurutkan kandidat-kandidat visualisasi sama saja, baik dengan aturan atau dengan bantuan mesin.
+        
+    2. Spesifikasi sebagai referensi
+
+        Beberapa sistem rekomendasi visualisasi membantu orang menemukan cara terbaik untuk melihat data dengan menggunakan gambar atau grafik. Mereka menggunakan data atau gambar referensi untuk menemukan cara yang sama atau berbeda untuk melihat data. Sistem SeeDB mencari cara yang berbeda untuk melihat data dengan menggunakan beberapa cara seperti variabel, transformasi, dan jenis gambar. Sistem Profiler Anomaly-based mencari cara untuk menemukan titik-titik yang tidak biasa dalam data. Jadi, sistem-sistem ini membantu orang membuat gambar atau grafik yang paling baik untuk melihat data.
+        
+4.2 Rekomendasi Berdasarkan Perilaku
+
+    Sistem rekomendasi berbasis perilaku adalah cara yang pintar untuk menemukan visualisasi yang tepat untuk pengguna. Sistem ini melihat apa yang pengguna lakukan dan kemudian menerka apa yang mereka ingin cari. Contohnya, ada sistem yang disebut HARVEST. Ketika pengguna berinteraksi dengan HARVEST, sistem menangkap aksi seperti melihat, menyaring, dan menyimpan. Dengan aksi-aksi ini, HARVEST bisa menerka apa yang pengguna ingin lakukan dan merekomendasikan visualisasi yang sesuai. Jadi, sistem ini membantu pengguna menemukan informasi yang mereka butuhkan dengan lebih mudah.
+    
+4.3 Rekomendasi Pribadi
+
+    Sistem rekomendasi pribadi adalah cara yang pintar untuk menemukan hal-hal yang paling menarik bagi kita. Contohnya, ada sistem yang disebut VizDeck, yang menggunakan perilaku kita di masa lalu untuk merekomendasikan visualisasi yang keren. Lalu ada sistem lain yang disebut VizRec, yang menggunakan dua cara: cara pertama adalah dengan melihat apa yang suka dilakukan oleh orang lain yang mirip dengan kita, dan cara kedua adalah dengan melihat fitur-fitur dari data dan visualisasi itu sendiri. Jadi, sistem ini bisa memberikan rekomendasi yang tepat dan menyenangkan berdasarkan apa yang kita suka dan apa yang orang lain suka yang mirip dengan kita.
+
+4.4 Kesimpulan
+
+    Sistem rekomendasi visualisasi membantu kita membuat grafik dan gambar yang menarik untuk memahami data. Ada beberapa cara untuk menggunakan sistem ini: beberapa sistem membiarkan kita membuat pilihan sendiri, seperti memasukkan kata kunci, sedangkan yang lain membutuhkan contoh data yang sudah ada. Sistem yang menggunakan aturan sederhana lebih mudah dipahami, tetapi tidak bisa menangkap semua hal yang kita inginkan. Sistem yang menggunakan komputer belajar bisa lebih akurat, tetapi membutuhkan banyak data untuk berlatih. Sistem yang berdasarkan perilaku kita bisa menyarankan grafik berdasarkan apa yang kita lakukan sebelumnya, tetapi tidak bisa menangkap perilaku yang tidak terduga. Jadi, sistem rekomendasi visualisasi ini sangat berguna untuk membuat grafik yang menarik dan membantu kita memahami data dengan lebih baik.
